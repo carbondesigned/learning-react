@@ -1,0 +1,9 @@
+.tweet {
+  background-color: #1c1c2c;
+  color: white;
+  padding: 2em;
+  font-family: "Poppins";
+}
+.tweet .tweet-message {
+  font-weight: 400;
+}

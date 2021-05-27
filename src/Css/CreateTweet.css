@@ -1,0 +1,15 @@
+.form {
+  width: 100%;
+  background-color: #1c1c2c;
+  display: grid;
+  grid-auto-flow: row;
+  place-items: center;
+  padding: 1em;
+}
+.form .btn {
+  width: 50%;
+}
+.form textarea {
+  resize: none;
+  width: 50%;
+}

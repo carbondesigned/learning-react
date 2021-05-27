@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 
 const Tweet = ({ name, tweet, tweets, setTweets }) => {
   const deleteTweet = () => {
@@ -6,13 +7,35 @@ const Tweet = ({ name, tweet, tweets, setTweets }) => {
   }
 
   return (
-    <div className="tweet">
-      <h2 className="name">{name}</h2>
-      <h3>{tweet.message}</h3>
-      <button>Like</button>
-      <button onClick={deleteTweet}>Delete</button>
-    </div>
+    <TweetStyle className="tweet">
+      <NameStyle className="name">{name}</NameStyle>
+      <TweetMessageStyle className="tweet-message">
+        {tweet.message}
+      </TweetMessageStyle>
+      <button className="btn btn-like">Like</button>
+      <button className="btn btn-delete" onClick={deleteTweet}>
+        Delete
+      </button>
+    </TweetStyle>
   )
 }
+
+const TweetStyle = styled.div`
+  background-color: #18181d;
+  border-radius: 1em;
+  color: white;
+  padding: 1em;
+`
+
+const NameStyle = styled.h2`
+  font-family: "Poppins";
+  font-size: 2em;
+`
+const TweetMessageStyle = styled.h3`
+  font-family: "Poppins";
+  font-weight: 400;
+  overflow: hidden;
+  word-wrap: normal;
+`
 
 export default Tweet
